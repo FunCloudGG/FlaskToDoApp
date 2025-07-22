@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Мои задачи</h1>
+
+        <form action="{{ url_for('add') }}" method="POST">
+            <input type="text" name="description" placeholder="Новая задача" required />
+            <button type="submit">Добавить</button>
+        </form>
+
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="{{ 'done' if task.done else '' }}">
+                    {{ task.description }}
+                    <a href="/done/{{ task.id }}">✅</a>
+                    <a href="/delete/{{ task.id }}">🗑️</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

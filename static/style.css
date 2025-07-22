@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #1f1f1f;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 400px;
+    background: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+
+button {
+    padding: 10px 15px;
+    background: #00cc99;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00b386;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.task-list li.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-list a {
+    text-decoration: none;
+    color: #00cc99;
+    margin-left: 10px;
+}
+
+.flash-container {
+  margin: 10px 0;
+}
+
+.flash-message {
+  background-color: #f8d7da;  /* красноватый фон Ч ошибка */
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
